@@ -72,7 +72,7 @@ toolchain {
   # We need to undef it before redefining it as some distributions now have
   # it enabled by default.
   compiler_flag: "-U_FORTIFY_SOURCE"
-  compiler_flag: "-D_FORTIFY_SOURCE=1"
+  # Under clang/libc++, _FORTIFY_SOURCE requires at least a "-O" optimization level.
   compiler_flag: "-fstack-protector"
   linker_flag: "-Wl,-z,relro,-z,now"
 
@@ -123,6 +123,10 @@ toolchain {
 
     # Disable assertions
     compiler_flag: "-DNDEBUG"
+
+    # Enable _FORTIFY_SOURCE only in OPT mode for clang. (it spews errors
+    # saying it needs at least -O to be effective otherwise)
+    compiler_flag: "-D_FORTIFY_SOURCE=1"
 
     # Removal of unused code and data at link time (can this increase binary size in some cases?).
     compiler_flag: "-ffunction-sections"
