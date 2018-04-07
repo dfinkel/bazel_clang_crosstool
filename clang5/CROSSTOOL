@@ -41,6 +41,7 @@ toolchain {
   # absolute locations and has no remote execution, yet. However, this will need
   # to be fixed, maybe with auto-detection?
   cxx_builtin_include_directory: "/usr/lib/clang/5.0.0/include"
+  cxx_builtin_include_directory: "/usr/lib/clang/5.0.1/include"
   cxx_builtin_include_directory: "/usr/local/include"
   cxx_builtin_include_directory: "/usr/include"
   tool_path { name: "gcov" path: "/usr/bin/gcov" }
