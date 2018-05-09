@@ -42,6 +42,13 @@ toolchain {
   # to be fixed, maybe with auto-detection?
   cxx_builtin_include_directory: "/usr/lib/clang/6.0.0/include"
   cxx_builtin_include_directory: "/usr/lib/clang/6.0.1/include"
+  cxx_builtin_include_directory: "/usr/lib/clang/6.0.2/include"
+  cxx_builtin_include_directory: "/usr/lib/clang/6.0.3/include"
+  cxx_builtin_include_directory: "/usr/lib/clang/6.0.4/include"
+  cxx_builtin_include_directory: "/usr/lib/clang/6.0.5/include"
+  cxx_builtin_include_directory: "/usr/lib/clang/6.0.6/include"
+  cxx_builtin_include_directory: "/usr/lib/clang/6.0.7/include"
+  cxx_builtin_include_directory: "/usr/lib/clang/6.0.8/include"
   cxx_builtin_include_directory: "/usr/local/include"
   cxx_builtin_include_directory: "/usr/include"
   tool_path { name: "gcov" path: "/usr/bin/gcov" }
